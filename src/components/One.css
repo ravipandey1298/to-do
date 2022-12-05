@@ -6,5 +6,5 @@
   box-shadow: none;
 }
 #list1 .select-input.form-control[readonly]:not([disabled]) {
-  background-color: #ee1c1c;
+  background-color: #fbfbfb;
 }
