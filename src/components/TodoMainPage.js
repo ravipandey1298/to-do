@@ -5,14 +5,8 @@ import "../App.css";
 function TodoMainPage() {
   const [inputList, setInputList] = useState("");
   const [addedItem, setAddedItems] = useState([]);
-  // const [date, setDate] = useState(new Date());
-  const [progress, setProgress] = useState(new Date());
+  const [date, setDate] = useState(new Date());
 
-  // let date;
-  // const getData = (data) => {
-  //   // date = data;
-
-  // };
 
   const inputItem = (event) => {
     setInputList(event.target.value);
@@ -73,7 +67,7 @@ function TodoMainPage() {
                             </button>
                           </div>
                         </div>
-                        <DateTime setProgress={setProgress} />
+                        <DateTime setDate={setDate} />
                       </div>
                     </div>
                   </div>
@@ -131,7 +125,7 @@ function TodoMainPage() {
                               >
                                 <p className="small mb-0">
                                   <i className="fas fa-info-circle me-2"></i>
-                                  {progress}
+                                  {date.toGMTString()}
                                 </p>
                               </a>
                             </div>
